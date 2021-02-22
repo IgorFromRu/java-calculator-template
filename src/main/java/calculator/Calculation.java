@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class Calculation {
 
-    public Double calculation(List<String> equation) {
+    public Double calculated(List<String> equation) {
         Stack<String> operation = new Stack<String>();
         Stack<Double> numbers = new Stack<Double>();
         Double number;
