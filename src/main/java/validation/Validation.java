@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Validation {
 
-    public static void duplicationCheck(List<String> list) {
+    public void duplicationCheck(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             try {
-                if (list.get(i).matches("^(\\()*(-)?\\d+(\\.\\d+)?(\\))*$") //  ^\d+(\.\d+)? любое число с точкой или без
+                if (list.get(i).matches("^(\\()*(-)?\\d+(\\.\\d+)?(\\))*$") //  ^\d+(\.\d+)? любое число с точкой или без или в скобках
                         || list.get(i).matches("^[\\+\\-\\*\\/]$")) {       // [\+\-\*\/] только знаки +,-,*,/
                 } else {
                     throw new InvalidRecordingFormatException

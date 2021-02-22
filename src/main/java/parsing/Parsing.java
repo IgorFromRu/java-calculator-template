@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Parsing {
 
-    public static List<String> parseString(String s) {
+    public List<String> parseString(String s) {
         List<String> list = new ArrayList<String>();
         String[] strings = s.split("\\s+");
         Collections.addAll(list, strings);

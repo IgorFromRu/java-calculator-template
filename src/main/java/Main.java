@@ -7,9 +7,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String stringIn = Console.input();   //          4.2 + 2 * 3 / 3 - 6.1
-        List<String> list = Parsing.parseString(stringIn);
-        Validation.duplicationCheck(list);
-        Console.output(Calculation.calculation(list));
+        System.out.println("Введите числа и операторы через пробел в формате: 4.2 + 2 * 3 / 3 - 6.1");
+        String stringIn = new Console().input();   //          4.2 + 2 * 3 / 3 - 6.1       168 / 12 * 2 / 15 + 15542 - 1546
+        List<String> list = new Parsing().parseString(stringIn);
+        new Validation().duplicationCheck(list);
+        new Console().output(new Calculation().calculation(list));
     }
 }
